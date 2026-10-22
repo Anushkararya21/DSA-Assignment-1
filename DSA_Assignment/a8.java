@@ -1,0 +1,14 @@
+import java.util.*;
+public class a8 {
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        System.out.println(isPalindrome(s, 0, s.length() - 1)
+                ? " is Palindrome" : "Not Palindrome");
+    }
+    public static boolean isPalindrome(String s, int left, int right) {
+        if (left >= right) return true;
+        if (s.charAt(left) != s.charAt(right)) return false;
+        return isPalindrome(s, left + 1, right - 1);
+    }
+}
